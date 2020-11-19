@@ -26,7 +26,7 @@
     <version>0.9.0</version>
 
     <modules>
-        <module>dss-web</module>
+        <module>web</module>
         <module>dss-common</module>
         <module>dss-appjoint-auth</module>
         <module>dss-appjoint-core</module>
