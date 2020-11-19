@@ -17,6 +17,19 @@
 
 package com.webank.wedatasphere.dss.application.service.impl;
 
+import org.apache.commons.lang.StringUtils;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.webank.wedatasphere.dss.appjoint.AppJoint;
 import com.webank.wedatasphere.dss.appjoint.exception.AppJointErrorException;
 import com.webank.wedatasphere.dss.appjoint.loader.AppJointLoader;
@@ -25,17 +38,6 @@ import com.webank.wedatasphere.dss.application.entity.Application;
 import com.webank.wedatasphere.dss.application.service.ApplicationService;
 import com.webank.wedatasphere.dss.common.exception.DSSRuntimeException;
 import com.webank.wedatasphere.dss.common.utils.DSSExceptionUtils;
-import org.apache.commons.lang.StringUtils;
-import org.apache.htrace.fasterxml.jackson.databind.JavaType;
-import org.apache.htrace.fasterxml.jackson.databind.ObjectMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * Created by chaogefeng on 2019/10/10.
