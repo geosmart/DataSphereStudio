@@ -34,7 +34,7 @@ const port = "9001";
 
 module.exports = {
   publicPath: './',
-  outputDir: 'dist/dist',
+  outputDir: 'dist/dss-web/dist',
   devServer: {
     port: 8080,
     open: true,
@@ -65,15 +65,15 @@ module.exports = {
       config.plugin('compress').use(FileManagerPlugin, [{
         onEnd: {
           copy: [
-            { source: 'node_modules/monaco-editor/dev/vs', destination: `./dist/dist/static/vs` },
-            { source: './config.sh', destination: `./dist/conf` },
-            { source: './install.sh', destination: `./dist/bin` }
+            { source: 'node_modules/monaco-editor/dev/vs', destination: `./dist/dss-web/dist/static/vs` },
+            { source: './bin/config.sh', destination: `./dist/dss-web/conf` },
+            { source: './bin/start-dss-web.sh', destination: `./dist/dss-web/bin` }
           ],
           // 先删除根目录下的zip包
-          delete: [`./wedatasphere-DataSphereStudio-${getVersion()}-dist.zip`],
+          delete: [`./bin/dss-web.zip`],
           // 将dist文件夹下的文件进行打包
           archive: [
-            { source: './dist', destination: `./wedatasphere-DataSphereStudio-${getVersion()}-dist.zip` },
+            { source: './dist', destination: `./bin/dss-web.zip` },
           ]
         },
       }])

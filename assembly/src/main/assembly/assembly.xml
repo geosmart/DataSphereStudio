@@ -177,6 +177,17 @@
     </includes>
   </fileSet>
 
+    <!--dss-web-->
+    <fileSet>
+      <directory>
+        ${project.parent.basedir}/web/bin/
+      </directory>
+      <outputDirectory>share/dss/dss-web</outputDirectory>
+      <includes>
+        <include>*.zip</include>
+      </includes>
+    </fileSet>
+
   <!--<dependencySets>-->
     <!--<dependencySet>-->
       <!--<outputDirectory>lib</outputDirectory>-->
